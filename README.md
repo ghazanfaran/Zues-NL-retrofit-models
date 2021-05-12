@@ -1,6 +1,6 @@
 # Zues-NL-retrofit-models
 
-Some of the retrofit models are used in the following papers. Thank you
+Some of these models are used in the following papers. Thank you
 
 
 
