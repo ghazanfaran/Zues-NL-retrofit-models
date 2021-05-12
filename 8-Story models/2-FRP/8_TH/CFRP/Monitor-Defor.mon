@@ -1,0 +1,83 @@
+# ------------------------------------------------------------------------------
+# Time history output
+# ------------------------------------------------------------------------------
+#
+# MinMaxOnly x
+#	x = 1 for minimum and maximum output 
+#	x = 0 for time history output 
+#
+# Directives ==> x:y:z
+# 	1st parameter, x
+#		NF: nodal force
+#		ND: nodal displacement
+#		NV: nodal velocity
+#		NA: nodal acceleration
+#		EF: cubic element force 
+#		JF: joint element force 
+#		Ee: material strain
+#		Es: material stress
+#		SS: story shear
+#		ID: inter-story drift  ==> Sometimes not work.need to debug.
+#
+#	2nd parameter, y
+#		x = NF or ND	==> node name
+#		x = EF, Ee, or Es	==> element name 
+#		x = SS		==> element name and length seperated with comma
+#			ex) c01,0.5;c02,0.5
+#		x = ID		==> upper and lower node;story height
+#			ex) n101, n01;5
+#
+#	3rd parameter, z
+#		x = NF or ND 	==> z = x, y, z, rx, ry, rz
+#		x = EF       	==> z = My1, Mz1, My2, Mz2, F,MT 
+#		x = JF			==> z = Fx, Fy, Fz, Mx, My, Mz
+#		x = Ee or Es 	==> z = abc
+#			a = material number 1, 2, or 3
+#			b = i or j for node 1 and 2, respectively
+#			c = t for top, b for bottom
+#		x = SS		==> shear force direction, Vx, or Vz
+#		x = ID		==> displacement direction, x, y, or z
+# 
+# Note: Do not use blank as a delimeter.
+#     : Use lower case letters only
+# ------------------------------------------------------------------------------
+
+#! MinMaxOnly 0
+
+ND:850:z
+NF:1:z
+NF:2:z
+NF:3:z
+NF:4:z
+NF:5:z
+NF:6:z
+NF:7:z
+NF:8:z
+NF:9:z
+NF:10:z
+NF:11:z
+NF:12:z
+NF:13:z
+NF:14:z
+NF:15:z
+NF:16:z
+NF:17:z
+NF:18:z
+NF:19:z
+NF:20:z
+NF:21:z
+NF:22:z
+NF:23:z
+NF:24:z
+ID:73,1;40:z
+ID:181,73;35:z
+ID:289,181;35:z
+ID:397,289;35:z
+ID:505,397;35:z
+ID:613,505;35:z
+ID:721,613;35:z
+ID:829,721;35:z
+NA:850:z
+
+
+

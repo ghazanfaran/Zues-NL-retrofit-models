@@ -1,0 +1,108 @@
+# ------------------------------------------------------------------------------
+# Time history output
+# ------------------------------------------------------------------------------
+#
+# MinMaxOnly x
+#	x = 1 for minimum and maximum output 
+#	x = 0 for time history output 
+#
+# Directives ==> x:y:z
+# 	1st parameter, x
+#		NF: nodal force
+#		ND: nodal displacement
+#		NV: nodal velocity
+#		NA: nodal acceleration
+#		EF: cubic element force 
+#		JF: joint element force 
+#		Ee: material strain
+#		Es: material stress
+#		SS: story shear
+#		ID: inter-story drift  ==> Sometimes not work.need to debug.
+#
+#	2nd parameter, y
+#		x = NF or ND	==> node name
+#		x = EF, Ee, or Es	==> element name 
+#		x = SS		==> element name and length seperated with comma
+#			ex) c01,0.5;c02,0.5
+#		x = ID		==> upper and lower node;story height
+#			ex) n101, n01;5
+#
+#	3rd parameter, z
+#		x = NF or ND 	==> z = x, y, z, rx, ry, rz
+#		x = EF       	==> z = My1, Mz1, My2, Mz2, F,MT 
+#		x = JF			==> z = Fx, Fy, Fz, Mx, My, Mz
+#		x = Ee or Es 	==> z = abc
+#			a = material number 1, 2, or 3
+#			b = i or j for node 1 and 2, respectively
+#			c = t for top, b for bottom
+#		x = SS		==> shear force direction, Vx, or Vz
+#		x = ID		==> displacement direction, x, y, or z
+# 
+# Note: Do not use blank as a delimeter.
+#     : Use lower case letters only
+# ------------------------------------------------------------------------------
+
+#! MinMaxOnly 0
+
+ND:1369:z
+ND:25:z
+NF:1:z
+NF:2:z
+NF:3:z
+NF:4:z
+NF:5:z
+NF:6:z
+NF:7:z
+NF:8:z
+NF:9:z
+NF:10:z
+NF:11:z
+NF:12:z
+NF:13:z
+NF:14:z
+NF:15:z
+NF:16:z
+NF:17:z
+NF:18:z
+NF:19:z
+NF:20:z
+NF:21:z
+NF:22:z
+NF:23:z
+NF:24:z
+NF:25:z
+NF:26:z
+NF:27:z
+NF:28:z
+NF:29:z
+NF:30:z
+NF:31:z
+NF:32:z
+NF:33:z
+NF:34:z
+NF:35:z
+NF:36:z
+NF:37:z
+NF:38:z
+NF:39:z
+NF:40:z
+NF:41:z
+NF:42:z
+NF:43:z
+NF:44:z
+NF:45:z
+NF:46:z
+NF:47:z
+NF:48:z
+NF:49:z
+ID:1369,1138;40:z
+ID:1138,907;40:z
+ID:907,676;40:z
+ID:676,445;40:z
+ID:445,214;50:z
+ID:214,25;35:z
+NA:1369:z
+NA:25:z
+
+
+
